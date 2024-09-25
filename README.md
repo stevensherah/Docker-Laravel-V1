@@ -15,4 +15,4 @@ docker-compose run --rm artisan key:generate
 
 docker-compose up -d --build site
 
-docker-compose up -d --build site
+docker-compose up -d
