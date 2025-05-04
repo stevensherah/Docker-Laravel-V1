@@ -19,7 +19,6 @@ services:
     depends_on:
       - php
       - mysql
-      - redis
       - mailhog
     networks:
       - laravel
@@ -56,14 +55,14 @@ services:
     networks:
       - laravel
 
-  redis:
-    image: redis:alpine
-    container_name: redis
-    restart: unless-stopped
-    ports:
-      - 6379:6379
-    networks:
-      - laravel
+  # redis:
+  #   image: redis:alpine
+  #   container_name: redis
+  #   restart: unless-stopped
+  #   ports:
+  #     - 6379:6379
+  #   networks:
+  #     - laravel
 
   composer:
     build:
