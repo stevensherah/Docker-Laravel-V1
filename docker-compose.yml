@@ -18,7 +18,7 @@ services:
       - ./src:/var/www/html:delegated
     depends_on:
       - php
-      - redis
+      # - redis
       - mysql
       - mailhog
     networks:
