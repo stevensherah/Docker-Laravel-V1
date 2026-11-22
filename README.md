@@ -10,6 +10,8 @@ docker-compose build --no-cache
 docker-compose run --rm composer update
 COMPOSER_PROCESS_TIMEOUT=2000 composer install
 
+docker compose exec app env COMPOSER_PROCESS_TIMEOUT=0 composer install
+
 docker-compose run --rm artisan migrate
 
 docker-compose run --rm artisan key:generate
