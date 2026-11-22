@@ -8,6 +8,7 @@ docker-compose run --rm composer create-project laravel/laravel src
 docker-compose build --no-cache
 
 docker-compose run --rm composer update
+COMPOSER_PROCESS_TIMEOUT=2000 composer install
 
 docker-compose run --rm artisan migrate
 
