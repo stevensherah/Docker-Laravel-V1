@@ -9,7 +9,7 @@ docker-compose build --no-cache
 
 docker-compose run --rm composer update
 
-docker compose exec app env COMPOSER_PROCESS_TIMEOUT=0 composer install
+docker compose run --rm --user root -e COMPOSER_PROCESS_TIMEOUT=0 composer install
 
 docker-compose run --rm artisan migrate
 
